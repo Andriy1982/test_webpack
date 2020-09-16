@@ -8,16 +8,19 @@
   </head>
 
   <body>
-    <form action="" class="form">
-      <label for="">First Name
-        <input type="text" name="first_name">
-      </label>
-      <label for="" >Last Name
-        <input type="text" name="last_name">
+    <div class="container">
+      <form action="" class="form">
+        <label for=""
+          >First Name
+          <input type="text" name="first_name" />
+        </label>
+        <label for=""
+          >Last Name
+          <input type="text" name="last_name" />
+        </label>
         <button class="btn" type="submit">Submit</button>
-      </label>
-    </form>
-
+      </form>
+    </div>
     <!-- <select name="select"> 
       <option value="value1">Значение 1</option> 
       <option value="value2" selected >Значение 2</option>
@@ -36,8 +39,32 @@
     <article class="intro">
       <!-- <h1>Webpack starter kit</h1> -->
 
-      <!-- < HTML image reference example. --> 
-      <!-- <img src="./images/intro.png" alt="" width="640" /> -->
+    <!-- < HTML image reference example. -->
+    <!-- <img src="./images/intro.png" alt="" width="640" /> -->
     <!-- </article> -->
+    <button type="button" data-action="start">Start</button>
+    <button type="button" data-action="stop">Stop</button>
+    <input class="input" type="date" />
+    <div class="timer" id="timer-1">
+      <div class="field">
+        <span class="value" data-value="days">11</span>
+        <span class="label">Days</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="hours">11</span>
+        <span class="label">Hours</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="mins">11</span>
+        <span class="label">Minutes</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="secs">11</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
   </body>
 </html>
