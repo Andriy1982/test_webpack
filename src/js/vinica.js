@@ -3,6 +3,7 @@
 import {markup} from './template'
 import article from './article'
 import articlesTemplate from '../templates/templateArticles.hbs';
+// import { resolve } from 'core-js/fn/promise';
 
 //   console.log(markup);
 // console.log(article.map(el => el.category));
@@ -78,3 +79,10 @@ console.log(markupArticles);
 // select.addEventListener('change', (event) => {
 //     console.log(event.target.value);
 // })
+
+const promise = new Promise(resolve => {
+  resolve({a: 34, b: 45}) 
+})
+promise.then(({a, b}) =>console.log(a, b));
+
+// 34, undefined
