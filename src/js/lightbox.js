@@ -8,11 +8,11 @@ const btnOpenImgRef = document.querySelector('button[data-open-img]');
 const modalTemplateImg = `<img src="./images/intro.png" alt="fxdgfd" width="800" height= "600">`;
 
 const instanceImg = basicLightbox.create(modalTemplateImg, {
-  //   onShow(instanceImg) {
-  //     instanceImg.element().addEventListener('click', event => {
-  //       //   console.log(event.target, event.currentTarget);
-  //     });
-  //   },
+  onShow(instanceImg) {
+    instanceImg.element().addEventListener('click', event => {
+      //   console.log(event.target, event.currentTarget);
+    });
+  },
   closable: true,
 });
 
