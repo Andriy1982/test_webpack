@@ -5,4 +5,6 @@ import './css/style.css';
 
 // import './js/timeData.js';
 // import './js/promis.js';
-import './js/hometask-11.js';
+// import './js/hometask-11.js';
+import './js/async.js';
+// import './js/respogination.js';
