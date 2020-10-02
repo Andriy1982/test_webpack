@@ -19,9 +19,9 @@ const ref = {
   inputLast: document.querySelector('input[name="last_name"]'),
 };
 
-writeWithLocalstorage();
 
-ref.form.addEventListener('submit', handlerForm);
+
+
 
 function handlerForm(event) {
   event.preventDefault();
@@ -61,3 +61,7 @@ function writeWithLocalstorage() {
     ref.inputLast.value = localStorage.getItem('SecondName');
   }
 }
+
+ref.form.addEventListener('submit', handlerForm);
+
+writeWithLocalstorage();
