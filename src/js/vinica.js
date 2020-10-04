@@ -21,8 +21,6 @@ const ref = {
 
 
 
-
-
 function handlerForm(event) {
   event.preventDefault();
 
@@ -51,7 +49,6 @@ function handlerSelect({ target }) {
     .map(el => el.article);
 
   localStorage.setItem('category', target.value);
-
   wrap.innerHTML = articlesTemplate(articleShow);
 }
 
