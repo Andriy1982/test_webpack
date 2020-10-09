@@ -1,5 +1,3 @@
-
-  
 import { markup } from './template';
 import article from './article';
 import articlesTemplate from '../templates/templateArticles.hbs';
@@ -12,53 +10,51 @@ import articlesTemplate from '../templates/templateArticles.hbs';
 //  - Пользователь может выбрать другую категорию, вы должны отрендерить новости из новой категории
 // - При перезагрузке страницы имя пользовател и выбранная категория должна сохранятся
 
-const ref = {
-  form: document.querySelector('.form'),
-  button: document.querySelector('.btn'),
-  inputFirst: document.querySelector('input[name="first_name"]'),
-  inputLast: document.querySelector('input[name="last_name"]'),
-};
+// const ref = {
+//   form: document.querySelector('.form'),
+//   button: document.querySelector('.btn'),
+//   inputFirst: document.querySelector('input[name="first_name"]'),
+//   inputLast: document.querySelector('input[name="last_name"]'),
+// };
 
+// function handlerForm(event) {
+//   event.preventDefault();
 
+//   if (document.querySelector('.select')) {
+//     return;
+//   }
 
-function handlerForm(event) {
-  event.preventDefault();
+//   ref.form.insertAdjacentHTML(
+//     'afterend',
+//     `<p class = "description">${ref.inputFirst.value}  ${ref.inputLast.value} выбирите категорию новостей</p> ${markup} `,
+//   );
+//   const selectRef = document.querySelector('.select');
+//   selectRef.insertAdjacentHTML('afterend', `<div class = "wraper"></div>`);
+//   selectRef.addEventListener('change', handlerSelect);
 
-  if (document.querySelector('.select')) {
-    return;
-  }
+//   localStorage.setItem('firstName', ref.inputFirst.value);
+//   localStorage.setItem('SecondName', ref.inputLast.value);
 
-  ref.form.insertAdjacentHTML(
-    'afterend',
-    `<p class = "description">${ref.inputFirst.value}  ${ref.inputLast.value} выбирите категорию новостей</p> ${markup} `,
-  );
-  const selectRef = document.querySelector('.select');
-  selectRef.insertAdjacentHTML('afterend', `<div class = "wraper"></div>`);
-  selectRef.addEventListener('change', handlerSelect);
+//   ref.form.reset();
+// }
 
-  localStorage.setItem('firstName', ref.inputFirst.value);
-  localStorage.setItem('SecondName', ref.inputLast.value);
+// function handlerSelect({ target }) {
+//   const wrap = document.querySelector('.wraper');
+//   const articleShow = article
+//     .filter(el => target.value === el.category)
+//     .map(el => el.article);
 
-  ref.form.reset();
-}
+//   localStorage.setItem('category', target.value);
+//   wrap.innerHTML = articlesTemplate(articleShow);
+// }
 
-function handlerSelect({ target }) {
-  const wrap = document.querySelector('.wraper');
-  const articleShow = article
-    .filter(el => target.value === el.category)
-    .map(el => el.article);
+// function writeWithLocalstorage() {
+//   if (localStorage.getItem('firstName')) {
+//     ref.inputFirst.value = localStorage.getItem('firstName');
+//     ref.inputLast.value = localStorage.getItem('SecondName');
+//   }
+// }
 
-  localStorage.setItem('category', target.value);
-  wrap.innerHTML = articlesTemplate(articleShow);
-}
+// ref.form.addEventListener('submit', handlerForm);
 
-function writeWithLocalstorage() {
-  if (localStorage.getItem('firstName')) {
-    ref.inputFirst.value = localStorage.getItem('firstName');
-    ref.inputLast.value = localStorage.getItem('SecondName');
-  }
-}
-
-ref.form.addEventListener('submit', handlerForm);
-
-writeWithLocalstorage();
+// writeWithLocalstorage();

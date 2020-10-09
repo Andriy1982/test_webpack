@@ -35,7 +35,7 @@ const timer = {
   },
 };
 
-timer.start();
+// timer.start();
 // timer.stop();
 
 function msToTime(duration) {
@@ -53,3 +53,23 @@ function msToTime(duration) {
 function pad(value) {
   return String(value).padStart(2, '0');
 }
+
+let number = 50;
+// let interval = setTimeout(function tick() {
+//   interval = setTimeout(tick, 1000);
+//   number -= 1;
+//   console.log(number);
+// }, 1000);
+
+// console.log(interval);
+// clearTimeout(3);
+let interval = null;
+function bar() {
+  interval = setTimeout(function tick() {
+    setTimeout(tick, 1000);
+    number -= 1;
+    console.log(number);
+  }, 1000);
+}
+console.log(interval);
+// bar();
